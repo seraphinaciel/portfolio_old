@@ -1,0 +1,97 @@
+/* width:1680 height:1050*/
+@media all and (max-width:1680px) and (device-height:1050px) {
+	.mContents .parallax {height:5250px;}	
+	.mSection00 {top:0px; background-size:7%;}
+	.mSection01 {top:1050px; background-size:cover;}
+	.mSection02 {top:2100px; background-size:cover;}
+	.mSection03 {top:3150px; background-size:contain;}
+	.mSection04 {top:4200px; background-size:6%; height:1050px;}
+
+	.mSection01 .arrow {top:30px;}
+	.mSection01 .tit {top:130px;}
+	.mSection01 .txt {top:340px;}
+	.mSection01 .link-box {width:50%; height:600px; right:10px; top:170px;}
+	.mSection01 .iMac {right:100px; width:700px; height:482px;}
+	.mSection01 .Mac {right:10px; top:460px; width:500px; height:301px;}
+	.mSection01 .iPad {right:550px; width:280px; height:363px;}
+	.mSection01 .iPhone {right:500px; top:520px; width:120px; height:256px;}
+	.mSection01 .leaf5 {right:250px; top:100px; }
+	
+	.mSection02 .arrow {top:100px;}
+	.mSection02 .tit {top:100px;}
+	.mSection02 .txt {top:340px;}
+	.mSection02 .link-box1 {width:50%; height:600px; right:10px; top:170px;}
+	.mSection02 .iMac {right:100px; width:600px; height:497px;}
+	.mSection02 .Mac {right:50px; top:460px; width:450px; height:288px;}
+	.mSection02 .iPad {right:550px; width:250px; height:326px;}
+	.mSection02 .iPhone {right:500px; top:520px; width:120px; height:233px;}
+	.mSection02 .leaf5 {right:250px; top:100px; }
+	.mSection04 .moon {z-index:1100;}
+	
+
+}
+
+/* min-height 1200px */
+@media screen and (min-height: 1200px) {
+	.mContents .parallax {height:6000px;}	
+	.mSection00 {top:0px; background-size:7%;}
+	.mSection01 {top:1200px; background-size:contain;}
+	.mSection02 {top:2400px; background-size:contain;}
+	.mSection03 {top:3600px; background-size:contain;}
+	.mSection04 {top:4800px; background-size:6.2%; height:1200px;}
+
+	.mSection00 .info-box-cover {margin:10% 0;}
+
+	.mSection01 .leaf3 {top:852px;}
+	.mSection01 .leaf4 {top:850px;}
+
+	.mSection03 .LLmain {top:650px;}
+	.mSection03 .content {margin-top:8%;}
+	
+	.mSection04 .gallery {margin:30% auto 0;}
+}
+
+
+/* min-height 1400px */
+@media screen and (min-height: 1400px) {
+	.mContents .parallax {height:7000px;}	
+	.mSection00 {top:0px; background-size:10%;}
+	.mSection01 {top:1400px; background-size:cover;}
+	.mSection02 {top:2800px; background-size:cover;}
+	.mSection03 {top:4200px; background-size:contain;}
+	.mSection04 {top:5600px; background-size:contain; height:1400px;}
+
+	.mSection00 .arrow {top:300px;}
+	.mSection00 .tit {top:200px;}
+	.mSection00 .txt {top:500px;}
+	.mSection00 .info-box-cover {margin:20% 0;}
+	
+	.mSection01 .arrow {top:230px;}
+	.mSection01 .tit {top:230px;}
+	.mSection01 .txt {top:440px;}
+	.mSection01 .link-box {top:300px;}
+	.mSection01 .iMac {top:330px;}
+	.mSection01 .Mac {top:650px;}
+	.mSection01 .iPad {top:550px;}
+	.mSection01 .iPhone {top:670px;}	
+	.mSection01 .leaf3 {top:852px;}
+	.mSection01 .leaf4 {top:850px;}
+
+	.mSection02 .arrow {top:200px;}
+	.mSection02 .tit {top:230px;}
+	.mSection02 .txt {top:440px;}
+	.mSection02 .link-box {top:300px;}
+	.mSection02 .iMac {top:330px;}
+	.mSection02 .Mac {top:650px;}
+	.mSection02 .iPad {top:550px;}
+	.mSection02 .iPhone {top:670px;}
+
+	.mSection03 .arrow {top:150px;}
+	.mSection03 .tit {top:207px;}
+	.mSection03 .txt {top:424px;}	
+	.mSection03 .LLmain {top:850px;}
+	.mSection03 .content {margin-top:10%;}
+	
+	.mSection04 .gallery {margin:40% auto 0;}
+	
+}
