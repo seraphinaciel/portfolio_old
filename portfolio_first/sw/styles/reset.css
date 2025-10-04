@@ -1,0 +1,107 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*********************************************************
+                      ARROW BOTTOM/TOP
+*********************************************************/
+
+.container5 {
+  color: #353535;
+  font-family: 14px 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.wrap {  
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0 auto;
+}
+
+.clicker {
+  background-color: white;
+  outline: none;  
+  font-weight: 600;
+	  position:absolute;
+  cursor: pointer;
+  padding: 0;
+	  border: none;
+	  height: 64px;
+	  width: 64px;
+  left: 8px;
+  top: 8px;
+	  border-radius: 100px;
+	  z-index: 2;
+}
+
+.circle {
+	  position: relative;
+  border-radius:40px;
+	  width: 80px;
+	  height: 80px;
+	  z-index: 1;
+}
+
+.clicker:hover + .circle, .clicker:active + .circle {
+	  animation: rotator linear .8s infinite;
+}
+
+@keyframes rotator {
+	  from{ transform: rotate(0deg); }
+	  to{ transform: rotate(360deg); }
+}
+		
+.angled {
+	background-image: linear-gradient(45deg, 
+	DarkCyan 0%,
+	DarkCyan 30%,
+	rgb(20,190,235) 30%,
+	rgb(20,190,235) 70%, 
+	DarkCyan 70%, 
+	DarkCyan 100%);
+}
+

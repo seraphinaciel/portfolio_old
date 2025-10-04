@@ -1,0 +1,285 @@
+/*********************************************************
+                     Main Portfolio
+*********************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy|Fredericka+the+Great|Cabin+Sketch|Patrick+Hand+SC);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+/*********************************************************
+                        FONT/BODY
+*********************************************************
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Josefin Sans', sans-serif;*/
+
+html {
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*********************************************************
+                     TITLE/BODY FONT
+*********************************************************/
+
+h1 {
+  font: 64px 'Fredericka the Great', cursive;
+  margin-bottom: 15px;
+  color:white;
+  margin-top:-5%;
+}
+h4 {
+  font: 24px 'Josefin Sans', sans-serif;
+  margin-bottom:20px;
+}
+
+h3 {
+  font: 24px 'Josefin Sans', sans-serif;
+  color:Honeydew;
+  font-weight:300;
+  font-size:24px;
+}
+
+/*********************************************************
+                     MY PICTURE
+*********************************************************/
+
+.pic2 {
+	margin-top:10px;
+	border-radius:15px;
+}
+
+/*********************************************************
+                          BODY
+*********************************************************/
+
+#mask {
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
+}
+
+/*********************************************************
+                          SECTION
+*********************************************************/
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition-property: top, bottom;
+    -webkit-transition-duration: 0.5s;
+     -moz-property: top, bottom;
+     -moz-duration: 0.5s;
+      -ms-property: top, bottom;
+      -ms-duration: 0.5s;
+       -o-property: top, bottom;
+       -o-duration: 0.5s;
+        transition-property: top, bottom;
+        transition-duration: 0.5s;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.r-content {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 150px;
+}
+
+/*********************************************************
+                        RIGHT MENU
+*********************************************************/
+#menu_list ul {
+  z-index: 1;
+  list-style: none;
+  position: fixed;
+  right: 10px;
+  top: 50%;
+}
+
+#menu_list ul li {
+  background: white;
+  margin-bottom: 10px;
+  height: 10px;
+  width: 10px;
+}
+#menu_list .li1:hover {background: PowderBlue;}
+#menu_list .li2:hover {background: OrangeRed;}
+#menu_list .li3:hover {background: DeepSkyBlue;}
+#menu_list .li4:hover {background: Crimson;}
+#menu_list .li5:hover {background: MidnightBlue;}
+#menu_list .li6:hover {background: DarkOliveGreen;}
+
+/*********************************************************
+                  SHARE BUTTON / ANIMATION
+*********************************************************/
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.hvr-bob {
+  margin-top:10px;
+  margin-left:5px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+  opacity:.8;
+}
+
+
+/* SW LOGO */
+.logo {
+	margin-top:0%;
+	background:url(../img/tokki.png) no-repeat;
+	width:1000px;
+	height:432px;
+}
+
+/* MOON IMAGE */
+.moon {
+	position:absolute;
+	top:5%;
+	right:5%;
+}
+
+/* SHARE BUTTON LIST */
+.share-buttons li {
+  list-style: none;
+  padding: 0;
+  margin-top:30px;
+  display: inline;
+}
+
+/*.arrowdown:hover {
+animation:mm 1s;    
+-webkit-animation:mm 1s;
+}
+@keyframes mm
+{100% {transform:rotate(180deg);}}
+@-webkit-keyframes mm
+{100% {-webkit-transform:rotate(180deg);}}
+*/
+
+/*********************************************************
+                      ARROW BOTTOM/TOP
+*********************************************************/
+.arrowdown, .arrowdown2, .arrowdown3, .arrowdown4, .arrowdown5 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 50px;
+  border-color: AliceBlue transparent transparent transparent;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+/*.arrowup {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 50px;
+  border-color: transparent transparent #ffffff transparent;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+}*/
+
+/*********************************************************
+                    SECTION BACK GROUND
+*********************************************************/
+
+.turquoise-bg {
+  background:url(../img/bg.jpg);
+}
+
+.carrot-bg {
+  background: Tomato;
+}
+
+.blue-bg {
+  background: #2980b9;
+}
+.coral-bg {
+  background: LightCoral;
+}
+.green-bg {
+	background:OliveDrab;
+}
+.cyan-bg {
+  background: DarkCyan;
+}

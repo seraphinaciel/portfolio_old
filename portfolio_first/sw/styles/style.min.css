@@ -1,0 +1,171 @@
+.carbon-poweredby,em,i{
+	font-style:italic;
+}
+.c-button,.c-menu__close{
+	-moz-appearance:none;
+	appearance:none;
+	border-radius:none;
+	-webkit-appearance:none;
+	font-size:14px;
+	box-shadow:none;
+}
+.c-button:focus,.c-menu__close:focus{
+	outline:0;
+}
+#carbonads,.c-mask,.c-menu{
+	position:fixed;
+}
+*,::after,::before{
+	box-sizing:inherit;
+}
+
+html{
+	box-sizing:border-box;
+}
+body,html{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.menu-top{
+	position:fixed; 
+	z-index:90 !important;
+}
+.o-wrapper{
+	transition:transform .3s;
+}
+.c-menu,.o-wrapper{
+	-webkit-transition:-webkit-transform .3s;
+}
+.o-container{
+	margin:0 auto;
+	padding:0 12px;
+	max-width:960px;
+}
+@media all and (min-width:480px){
+	.o-container{
+		padding:0 24px;
+	}
+}
+@media all and (min-width:720px){
+	.o-container{
+		padding:0 48px;
+	}
+}
+
+/* SIDE MENU */
+.c-menu{
+	z-index:200;
+	background-color:#67b5d1;
+	transition:transform .3s;
+}
+.c-menu__items{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.c-menu--slide-left{
+	width:100%;
+	height:100%;
+}
+@media all and (min-width:320px){
+.c-menu--slide-left{
+	width:300px;
+	}
+}
+.c-menu--slide-left .c-menu__item{
+	display:block;
+	text-align:center;
+	border-top:solid 1px #b5dbe9;
+	/* SIDE MENU COLOR */
+	border-bottom:solid 1px #3184a1;
+}
+.c-menu--slide-left .c-menu__item:first-child{
+	border-top:none;
+}
+.c-menu--slide-left .c-menu__item:last-child{
+	border-bottom:none;
+}
+/* SIDE MENU FONT COLOR */
+.c-menu--slide-left .c-menu__link{
+	display:block;
+	padding:12px 24px;
+	color:#fff;
+}
+.c-menu--slide-left .c-menu__close{
+	display:block;
+	padding:12px 24px;
+	width:100%;
+}
+.c-menu--slide-left{
+	top:0;left:0;
+	-webkit-transform:translateX(-100%);
+	-ms-transform:translateX(-100%);
+	transform:translateX(-100%);
+}
+@media all and (min-width:320px){
+	.c-menu--slide-left{
+		-webkit-transform:translateX(-300px);
+		-ms-transform:translateX(-300px);
+		transform:translateX(-300px);
+	}
+}
+.c-menu--slide-left.is-active{
+	-webkit-transform:translateX(0);
+	-ms-transform:translateX(0);
+	transform:translateX(0);
+}
+.c-mask,body.has-active-menu{
+	overflow:hidden
+}
+
+/* SIDE MENU CLOSE BUTTON */
+.c-menu__close{
+	color:#fff;
+	background-color:#3184a1;
+	border:none;
+	cursor:pointer;
+}
+/* SIDE MENU BACKGROUND */
+.c-mask{
+	z-index:100;
+	top:0;
+	left:0;
+	width:0;
+	height:0;
+	background-color:#333333;
+	opacity:0;
+	-webkit-transition:opacity .3s,width 0s .3s,height 0s .3s;
+	transition:opacity .3s,width 0s .3s,height 0s .3s;
+}
+.c-mask.is-active{
+	width:100%;
+	height:100%;
+	opacity:.7;
+	-webkit-transition:opacity .3s;
+	transition:opacity .3s;
+}
+
+/* MENU BUTTON */
+.c-buttons{
+	margin-left:80%;
+	text-align:center;
+}
+.c-button{
+	background:url(../img/menu_tokki.png) no-repeat;
+	width:100px;
+	height:125px;
+	display:inline-block;
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+	cursor:pointer;
+}
+.c-button:disabled{
+	opacity:.3;
+	cursor:not-allowed;
+}
+
+button{
+	border:none;
+}

@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css?family=Yantramanav);
+@import url(https://fonts.googleapis.com/css?family=Snowburst+One);
+@import url(https://fonts.googleapis.com/css?family=Bigelow+Rules|Lovers+Quarrel);
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy|Fredericka+the+Great|Cabin+Sketch|Patrick+Hand+SC);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+/* font-family: 'Mountains of Christmas', cursive;
+font-family: 'Lakki Reddy', cursive;
+font-family: 'Ranga', cursive;
+font-family: 'Snowburst One', cursive;
+ */
+html {overflow-x:hidden}
+
+/*  layout  */
+div.mWrap {
+	position: relative;
+	width:100%; 
+	min-height:100%; 
+	text-align:center; 
+	display:block; 
+}
+div.mContents {
+	position:absolute; 
+	top:0; left:0; 
+	min-height:100%;
+	text-align:left; 
+	/* margin:0 75px 0 200px;  */
+	padding:0;
+	background:#ccc; 
+	overflow:hidden;
+	display:block;
+	/* border:1px solid red; */
+}
+.mContents {
+	overflow:hidden;
+	width:100%; 
+	/* min-width:1445px; */
+	margin:0px !important
+}
+.mContents .parallax {
+	position:relative; 
+	width:100%;
+	height:6000px;	/* 다 만들고 다시 고쳐야함 */
+	margin:0 auto; }
+
+.mSection00, .mSection01, .mSection02, .mSection03, .mSection04 {
+	overflow:hidden; 
+	position:absolute; 
+	/* left:50%;  */
+	width:100%; 
+	height:120%;
+	/* margin-left:-822px;  */
+	background-size:contain;
+	/* border:1px solid blue; */
+}
+.mSection00 > *, .mSection01 > *, .mSection02 > *, .mSection03 > *, .mSection04 > * {position:absolute;}
+/* background */
+.mSection00 {top:0px; background:url(../img/sky00.png);}
+.mSection01 {top:1200px; background:url(../img/sky01.png);}
+.mSection02 {top:2400px; background:url(../img/sky02.png); z-index:1000}
+.mSection03 {top:3600px; background:url(../img/sky03-1.png); z-index:2000}
+.mSection04 {top:4800px; background:url(../img/sky03-2.png); z-index:3000}
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+hr {border-color: rgba(255, 255, 255, 0.2);}
+h1 {
+	font:120px 'Ranga';
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 300px;
+	font-weight: 400;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+p {
+	font:20px 'Josefin Sans'; 
+	color: rgba(255, 255, 255, 0.8);
+}
+.txt {
+	font-family: 'Yantramanav', sans-serif;
+	font-size:120px;
+	opacity:.2;
+	line-height: 120px;
+	font-weight: 900;
+	text-align: center;
+	margin-top:-30px;
+}
+.mSection00 h1 {
+	font:240px 'Lovers Quarrel';
+	color: rgba(255, 255, 255, .7);
+}
+
+.arrow {position:absolute; width:49px; height:56px; z-index:500; }
+
+/* ------------------------------------------------------------------------------------------- */
+/* section00-cover- */
+/* ------------------------------------------------------------------------------------------- */
+.mSection00 .tit {left:291px; top:200px; z-index:500;}
+.mSection00 .arrow {right:0px; top:350px;}
+.mSection00 .txt {left:294px; top:420px; z-index:400; color:#250045;}
+
+.mSection00 div[class^="obj"] {z-index:300;}
+.mSection00 .obj01 {left:117px; top:0px;}
+.mSection00 .obj02 {left:729px; top:363px;/*  background:pink; */}
+.mSection00 .obj03 {left:-360px; top:52px; /* background:orange; */}
+.mSection00 .obj04 {left:1121px; top:578px;/*  background:Gold; */}
+.mSection00 .obj05 {left:300px; top:689px;/*  background:DodgerBlue; */}
+.mSection00 .obj06 {left:750px; top:291px;/*  background:Green; */}
+.mSection00 .obj07 {left:20px; top:355px;/*  background:blue; */}
+.mSection00 .obj08 {left:-900px; top:50px;/*  background:Indigo; */}
+/* Loader */
+.loader {
+    border-radius: 50%;
+    margin: 3em;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.loader, .loader:before, .loader:after {animation: 1s infinite ease-in-out;}
+.loader:before, .loader:after {
+	width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    position: absolute; top: 0; left: 0;
+}
+.loader-1 {
+	width: 30px;
+    height: 30px;
+	animation-name: loader1;
+	background:gold;
+}
+@keyframes loader1 {
+    from { transform: scale(0); opacity: 1; }
+    to   { transform: scale(1); opacity: 0; }
+}
+.loader-2 {width: 10px; height: 10px;}
+.loader-2:before, .loader-2:after {content: '';}
+.loader-2:before {
+    border: 1px solid #fff;
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+    animation-name: loader2-1;
+}
+/* 테두리(고리) */
+    @keyframes loader2-1 {
+        0% { transform: scale(2); opacity: .8; }
+        50% { transform: scale(5.3); opacity: 0; }
+        100% { transform: scale(2.3); opacity: 0; }
+    }
+.loader-2:after {
+    background-color: #fff;
+    animation-name: loader2-2;
+}
+    @keyframes loader2-2 {
+        0% { transform: scale(1); }
+        50% { transform: scale(0.7); }
+        100% { transform: scale(1); }
+    }
+.loader-3 {
+	width: 15px;
+    height: 15px;
+	background-color:indigo;
+}
+.loader-3:before {
+    content: '';
+    border: 5px solid rgba(255,255,255,.3);
+    top: -5px;
+    left: -5px;
+    animation-name: loader3;
+}
+    @keyframes loader3 {
+        0% { transform: scale(0);  opacity: 1;}
+        50% { transform: scale(1); opacity: 0.5; }
+        100% { transform: scale(3); opacity: 0; }
+    }
+
+/* ------------------------------------------------------------------------------------------- */
+/* section01-iherb- */
+/* ------------------------------------------------------------------------------------------- */
+.mSection01 .arrow {left:0px; top:350px;}
+.mSection01 .tit {left:291px; top:180px; z-index:500}
+.mSection01 .txt {left:297px; top:390px; z-index:400; color:#007ea4;}
+
+.mSection01 div[class^="leaf"] {
+	background-size:cover;
+	z-index:300;
+}
+.mSection01 .leaf1 {
+	right:0px; top:0px; 
+	width:204px; height:358px; 
+	/* background:red;  */
+	background-image: url('../img/leaf03.png');
+}
+.mSection01 .leaf2 {
+	left:0px; top:63px; 
+	width:322px; height:276px; 
+	/* background:pink;  */
+	background-image: url('../img/leaf04.png');
+}
+.mSection01 .leaf3 {
+	left:290px; top:752px; 
+	width:222px; height:176px; 
+	/* background:orange;  */
+	background-image: url('../img/leaf04.png');
+	-webkit-transform: rotate(-130deg);
+	transform: rotate(-130deg);
+}
+.mSection01 .leaf4 {
+	left:0px; top:570px; 
+	width:204px; height:358px; 
+	/* background:Gold;  */
+	background-image: url('../img/leaf03.png');
+	-webkit-transform: rotate(180deg); 
+	transform: rotate(180deg);
+}
+.mSection01 .leaf5 {
+	right:130px; top:400px; 
+	width:180px; height:154px; 
+	/* background:DodgerBlue;  */
+	background-image: url('../img/leaf02.png');
+	-webkit-transform: rotate(0deg); 
+	transform: rotate(-15deg);
+}
+.mSection01 .leaf6 {
+	left:540px; top:180px; 
+	width:100px; height:86px; 
+	/* background:blue;  */
+	background-image: url('../img/leaf02.png');
+}
+/* leaf*/
+.mSection01 div[class^="obj"] {
+	width:50px; height:50px;
+	background-image: url('../img/leaf.png');
+	background-color:rgba(0,0,0,0);
+	background-size:cover;
+	z-index:300;
+}
+.mSection01 .obj01, .mSection01 .obj02,.mSection01 .obj03 {
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+.mSection01 .obj06, .mSection01 .obj07 {
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+.mSection01 .obj01 {left:117px; top:0px; background:red;}
+.mSection01 .obj02 {left:729px; top:363px; background:pink;}
+.mSection01 .obj03 {left:209px; top:452px; background:orange;}
+.mSection01 .obj04 {left:1121px; top:578px; background:Gold;}
+.mSection01 .obj05 {right:50px; top:291px; background:green;}
+.mSection01 .obj06 {left:1238px; top:389px; background:DodgerBlue;}
+.mSection01 .obj07 {left:20px; top:355px; background:blue;}
+
+.mSection01 .iMac {right:200px; top:200px; width:900px; height:620px; background-image: url('../img/iMac.png'); background-size:cover;}
+.mSection01 .Mac {right:0px; top:520px; width:580px; height:349px; background-image: url('../img/MacBook.png'); background-size:cover;}
+.mSection01 .iPad {right:768px; top:420px; width:386px; height:500px; background-image: url('../img/iPad.png'); background-size:cover;}
+.mSection01 .iPhone {right:710px; top:540px; width:175px; height:373px; background-image: url('../img/iPhone.png'); background-size:cover; z-index:500;}
+
+/* ------------------------------------------------------------------------------------------- */
+/* section02-lovelive- */
+/* ------------------------------------------------------------------------------------------- */
+.mSection02 .arrow {right:-100px; top:150px;}
+.mSection02 .tit {left:291px; top:147px; z-index:1500;}
+.mSection02 .txt {left:297px; top:364px; z-index:1450; color:#9c5453;}
+.mSection02 .LLmain {
+	position:absolute; left:0px; top:450px; 
+	width:943px; height:515px; 
+	background-image: url('../img/LLmain.png');
+	background-size:cover;
+	z-index:1000;
+	opacity:.5;
+}
+.mSection02 .gallery a:hover {
+	outline:5px solid #cf8c8b;
+	-webkit-transition:.2s ease;
+}
+.mSection02 .content {width:270px; }
+.mSection02 .gallery img {float:left;}
+.mSection02 .gallery a {width:250px; height:167px;}
+.mSection02 .ga01 {left:55%; top:70px; z-index:1100;}
+.mSection02 .ga02 {left:75%; top:100px; z-index:1200;}
+/* shells */
+.mSection02 .shells01 {
+	right:-10px; top:720px;
+	width:489px; height:220px;
+	background-image:url('../img/shells01.png');
+	z-index:1000;
+}
+.mSection02 .shells02 {
+	left:0; top:0;
+	width:300px; height:161px;
+	background-image:url('../img/shells02.png');
+	background-size:cover;
+	z-index:1000;
+}
+/* pearl */
+.mSection02 div[class^="pearl"] {
+	background-image: url('../img/pearl01.png');
+	background-size:cover;
+	z-index:1500;
+}
+.mSection02 div[class^="silver"] {
+	width:20px; height:20px;
+	background-image: url('../img/pearl02.png');
+	background-size:cover;
+	z-index:1500;
+}
+.mSection02 .p-30px {width:30px; height:30px;}
+.mSection02 .p-15px {width:15px; height:15px;}
+.mSection02 .pearl01 {left:65px; top:160px;}
+.mSection02 .pearl02 {left:320px; top:120px;}
+.mSection02 .silverPearl03 {left:150px; top:330px;}
+.mSection02 .pearl04 {left:520px; top:400px;}
+.mSection02 .silverPearl05 {right:420px; top:170px;}
+.mSection02 .pearl06 {right:20px; top:330px;}
+.mSection02 .pearl07 {right:110px; top:490px;}
+.mSection02 .pearl08 {right:20px; top:530px;}
+.mSection02 .pearl09 {right:500px; top:750px;}
+.mSection02 .pearl10 {right:450px; top:800px;}
+
+/* ------------------------------------------------------------------------------------------- */
+/* section03-mika- */
+/* ------------------------------------------------------------------------------------------- */
+.mSection03 .arrow {left:0px; top:350px; }
+.mSection03 .tit {left:291px; top:190px; z-index:1500}
+.mSection03 .txt {left:297px; top:410px; z-index:1450; color:#002745;}
+
+.mSection03 .content {width:100%;}
+.mSection03 .gallery a {position:absolute; z-index:1200;}
+.mSection03 .obj01 {right:660px; top:0px; width:270px; height:220px; z-index:1100}
+.mSection03 .gallery .obj01 img {width:100%;}
+.mSection03 .obj02 {right:400px; top:105px; width:440px; height:260px; z-index:1200}
+.mSection03 .obj03 {right:350px; top:353px; width:560px; height:360px; z-index:1350;}
+.mSection03 .gallery .obj03 img {width:560px;}
+.mSection03 .obj04 {right:690px; top:590px; width:320px; height:200px; z-index:1200}
+
+.mSection03 .ornament {
+	background-size:cover;
+	z-index:1400
+}
+.mSection03 div[class^="ornament night"] {
+	background-image:url(../img/night01.png);
+}
+.mSection03 .star02 {
+	left:100px; top:500px; 
+	width:251px; height:232px; 
+	background-image:url(../img/star2.png);
+}
+.mSection03 .nightBuilding02 {
+	left:0; top:720px; 
+	width:1080px; height:210px; 
+	background-size:90% 98%;
+}
+	
+.mSection03 .star01 {
+	right:50px; top:250px; 
+	width:84px; height:82px; 
+	background-image:url(../img/star1.png);
+}
+.mSection03 .nightBuilding01 {
+	right:0px; top:750px; 
+	width:880px; height:170px;
+	background-size:70% 98%;
+	opacity:.8;
+	transform:rotateY(180deg);
+}
+.mSection03 .road {
+	right:0px; top:850px;
+	width:70%; height:80px;
+	background-image:url(../img/road.png);
+	background-size:100% 90%;
+}
+
+.mSection03 .moon {
+	right:50px; top:0px; 
+	width:338px; height:341px;
+	background-image:url(../img/moon.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
